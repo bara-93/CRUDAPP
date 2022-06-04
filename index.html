@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="موسوعة,عربية,شاملة,موضوع">
+    <meta name="description" content=" أكبر موقع عربي بالعالم">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- import font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito&display=swap"
+    rel="stylesheet">
+    <!-- import font awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- import bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- import main style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- import main style responsive -->
+    <link rel="stylesheet" href="assets/css/style_responsive.css">
+    <title>CRUD</title>
+</head>
+<body>
+  
+    <div class="container py-5">
+      <h2 class="text-center text-capitalize text-primary">add blogs</h2>
+  
+      <form class="mt-5">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title"   placeholder="enter the title">
+          </div>
+          <div class="mb-3">
+            <label for="writer" class="form-label">writer name</label>
+            <input type="text" class="form-control" id="writer" placeholder="enter the writter name">
+          </div>
+          <div class="mb-3">
+            <label for=" " class="form-label">tags</label>
+            <input type="text" class="form-control" id="tag" placeholder="enter tag "/>
+          </div>
+          <div class="mb-3">
+            <label for=" " class="form-label">Description</label>
+            <textarea name=""  cols="30" rows="3" id="desc" class="form-control"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for=" " class="form-label">created_at</label>
+            <input type="date" id="date" class="form-control">
+          </div>
+          <div id="btns">
+
+            <button type="button" class="btn btn-primary" id="add">Add Blog</button>
+          </div>
+      </form>
+<hr>
+      <div class="form-grup">
+        <input type="text" class="form-control" placeholder="Search By NAme ..." onkeyup="search(this.value)">
+      </div>
+      <div class="text-center ">
+        <button class="btn btn-danger mt-5" onclick="deleteAll()"> Delete All</button>
+      </div>
+      <table class="table table-striped table-bordered mt-3">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">writer</th>
+            <th scope="col">tag</th>
+            <th scope="col">description</th>
+            <th scope="col">created_at</th>
+          </tr>
+        </thead>
+        <tbody id="blogsData">
+          
+        </tbody>
+      </table>
+
+    </div>
+
+    
+    
+
+
+
+    <!-- import bootstrap js  -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    script
+</body>
+</html>
